@@ -1,0 +1,16 @@
+Program parsujacy logi z pliku wtmp
+Program dziala na Linuxach.
+
+Uzycie:
+1. Kompilacja za pomoca kompilatora gcc
+	- gcc -o wtmp wtmp.c
+2. Uruchomienie
+	- ./wtmp
+
+Opis programu:
+
+Kluczowymi elementami w programie jest marko FILENAME. 
+Makro to zawiera sciezke do logu ktory bedziemy parsowac.
+Do parsowania danych wykorzystamy strukture utmp.
+Uchwyt f, otwiera log tylko do odczytu. W petli while czytamy interesujace nas rekordy za pomoca strutury wtmp odczyt jest bardzo prosty wiec jezeli chcemy mozemy dodac interesujace elementy struktury (man wtmp).
+Program dodatkowo wykorzystuje syslog do logowania ewentualnych bledow czy startu programu w systemie. Petla czyta caly plik.
